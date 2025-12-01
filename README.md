@@ -73,7 +73,3 @@ The model achieves high performance on fraud detection with balanced precision a
 - **Algorithm**: Random Forest Classifier
 - **Technique**: SMOTE (Synthetic Minority Over-sampling Technique)
 - **Approach**: Handles class imbalance by generating synthetic samples
-
-## Results
-
-The model achieves high performance on fraud detection with balanced precision and recall metrics, suitable for production deployment.
