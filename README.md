@@ -13,6 +13,7 @@ You **must** download it manually to run this project:
 3. Place it in the project root directory
 
 **Dataset Information:**
+
 - **Size**: 284,807 transactions
 - **Features**: 30 variables (V1-V28 from PCA transformation, Time, Amount)
 - **Target**: Class (0 = legitimate, 1 = fraud)
@@ -21,12 +22,14 @@ You **must** download it manually to run this project:
 ## Setup
 
 1. Clone this repository:
+
 ```bash
 git clone https://github.com/viniciusdias2902/credit_card_fraud_detection.git
 cd credit_card_fraud_detection
 ```
 
 2. Install dependencies:
+
 ```bash
 pip install scikit-learn imbalanced-learn pandas numpy matplotlib seaborn
 ```
@@ -38,6 +41,7 @@ pip install scikit-learn imbalanced-learn pandas numpy matplotlib seaborn
 ## Usage
 
 1. Open the Jupyter notebook:
+
 ```bash
 jupyter notebook treinamento_modelos.ipynb
 ```
@@ -64,11 +68,6 @@ jupyter notebook treinamento_modelos.ipynb
 
 The model achieves high performance on fraud detection with balanced precision and recall metrics, suitable for production deployment.
 
-## License
-
-MIT
-
-
 ## Model
 
 - **Algorithm**: Random Forest Classifier
@@ -78,7 +77,3 @@ MIT
 ## Results
 
 The model achieves high performance on fraud detection with balanced precision and recall metrics, suitable for production deployment.
-
-## License
-
-MIT
