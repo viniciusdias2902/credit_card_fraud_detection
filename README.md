@@ -63,9 +63,3 @@ jupyter notebook treinamento_modelos.ipynb
 - **Algorithm**: Random Forest Classifier
 - **Technique**: SMOTE (Synthetic Minority Over-sampling Technique)
 - **Approach**: Handles class imbalance by generating synthetic samples
-
-## Model
-
-- **Algorithm**: Random Forest Classifier
-- **Technique**: SMOTE (Synthetic Minority Over-sampling Technique)
-- **Approach**: Handles class imbalance by generating synthetic samples
