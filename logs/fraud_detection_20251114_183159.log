@@ -1,0 +1,454 @@
+2025-11-14 18:31:59 - FraudDetection - INFO - ======================================================================
+2025-11-14 18:31:59 - FraudDetection - INFO - Sistema de logging inicializado com sucesso!
+2025-11-14 18:31:59 - FraudDetection - INFO - Diretório de logs: logs/
+2025-11-14 18:31:59 - FraudDetection - INFO - Arquivo de log: logs/fraud_detection_20251114_183159.log
+2025-11-14 18:31:59 - FraudDetection - INFO - Data/Hora de início: 2025-11-14 18:31:59
+2025-11-14 18:31:59 - FraudDetection - INFO - ======================================================================
+2025-11-14 18:31:59 - FraudDetection - INFO - 
+Sistema de logging configurado!
+2025-11-14 18:31:59 - FraudDetection - INFO - Arquivo de log: logs/fraud_detection_20251114_183159.log
+
+2025-11-14 18:31:59 - FraudDetection - INFO - Sistema de salvamento de gráficos configurado!
+2025-11-14 18:31:59 - FraudDetection - INFO - Diretório de gráficos: graficos/
+2025-11-14 18:31:59 - FraudDetection - INFO - Funções de salvar/carregar modelos configuradas!
+2025-11-14 18:31:59 - FraudDetection - INFO - Diretório de modelos: modelos/
+2025-11-14 18:32:01 - FraudDetection - INFO - Bibliotecas importadas com sucesso.
+2025-11-14 18:32:02 - FraudDetection - INFO - Dimensões do dataset: 284,807 linhas x 31 colunas
+2025-11-14 18:32:02 - FraudDetection - INFO - 
+Primeiras linhas do dataset:
+2025-11-14 18:32:02 - FraudDetection - INFO - INFORMAÇÕES DO DATASET
+2025-11-14 18:32:02 - FraudDetection - INFO - ======================================================================
+2025-11-14 18:32:02 - FraudDetection - INFO - 
+======================================================================
+2025-11-14 18:32:02 - FraudDetection - INFO - ESTATÍSTICAS DESCRITIVAS
+2025-11-14 18:32:02 - FraudDetection - INFO - ======================================================================
+2025-11-14 18:32:02 - FraudDetection - INFO - VERIFICAÇÃO DE QUALIDADE DOS DADOS
+2025-11-14 18:32:02 - FraudDetection - INFO - ======================================================================
+2025-11-14 18:32:02 - FraudDetection - INFO - 
+Valores nulos por coluna:
+2025-11-14 18:32:03 - FraudDetection - INFO - Nenhum valor nulo encontrado.
+2025-11-14 18:32:03 - FraudDetection - INFO - 
+Número de linhas duplicadas: 1081
+2025-11-14 18:32:03 - FraudDetection - INFO - 
+Nenhum valor infinito detectado.
+2025-11-14 18:32:03 - FraudDetection - INFO - 
+[ALERTA] Dataset contém valores nulos, duplicatas ou infinitos que requerem tratamento.
+2025-11-14 18:32:04 - FraudDetection - INFO - DISTRIBUIÇÃO DAS CLASSES
+2025-11-14 18:32:04 - FraudDetection - INFO - ======================================================================
+2025-11-14 18:32:04 - FraudDetection - INFO - Classe 0 (Transações Legítimas): 284,315 (99.8273%)
+2025-11-14 18:32:04 - FraudDetection - INFO - Classe 1 (Fraudes):              492 (0.1727%)
+2025-11-14 18:32:04 - FraudDetection - INFO - 
+Razão de Desbalanceamento: 1:578
+2025-11-14 18:32:04 - FraudDetection - INFO - Interpretação: Para cada transação fraudulenta, existem aproximadamente 578 transações legítimas
+2025-11-14 18:32:04 - FraudDetection - INFO - Gráfico salvo: graficos/01_roc_curve.png
+2025-11-14 18:32:04 - FraudDetection - INFO - 
+IMPLICAÇÕES DO DESBALANCEAMENTO:
+2025-11-14 18:32:04 - FraudDetection - INFO - ======================================================================
+2025-11-14 18:32:04 - FraudDetection - INFO - 1. Acurácia não é uma métrica adequada (modelo pode ter 99.8% de acurácia
+2025-11-14 18:32:04 - FraudDetection - INFO -    simplesmente classificando tudo como classe majoritária)
+2025-11-14 18:32:04 - FraudDetection - INFO - 2. Necessidade de técnicas de balanceamento (SMOTE será aplicado)
+2025-11-14 18:32:04 - FraudDetection - INFO - 3. Métricas relevantes: Recall, Precisão, F1-Score, AUC-ROC
+2025-11-14 18:32:04 - FraudDetection - INFO - 4. Validação cruzada estratificada é essencial
+2025-11-14 18:32:04 - FraudDetection - INFO - ANÁLISE DA FEATURE 'AMOUNT' POR CLASSE
+2025-11-14 18:32:04 - FraudDetection - INFO - ======================================================================
+2025-11-14 18:32:04 - FraudDetection - INFO -           count        mean         std  min   25%    50%     75%       max
+Class                                                                      
+0      284315.0   88.291022  250.105092  0.0  5.65  22.00   77.05  25691.16
+1         492.0  122.211321  256.683288  0.0  1.00   9.25  105.89   2125.87
+2025-11-14 18:32:04 - FraudDetection - INFO - 
+OBSERVAÇÕES:
+2025-11-14 18:32:04 - FraudDetection - INFO - - Valor médio de transações legítimas: $88.29
+2025-11-14 18:32:04 - FraudDetection - INFO - - Valor médio de fraudes: $122.21
+2025-11-14 18:32:04 - FraudDetection - INFO - - Diferença: $33.92
+2025-11-14 18:32:05 - FraudDetection - INFO - Gráfico salvo: graficos/02_boxplot.png
+2025-11-14 18:32:06 - FraudDetection - INFO - Gráfico salvo: graficos/03_histogram.png
+2025-11-14 18:32:07 - FraudDetection - INFO - INTERPRETAÇÃO:
+2025-11-14 18:32:07 - FraudDetection - INFO - - Fraudes destacadas em vermelho mostram padrões temporais específicos
+2025-11-14 18:32:07 - FraudDetection - INFO - - A distribuição temporal pode ser uma feature relevante para detecção
+2025-11-14 18:32:07 - FraudDetection - INFO - CORRELAÇÃO DAS FEATURES COM A VARIÁVEL ALVO (CLASS)
+2025-11-14 18:32:07 - FraudDetection - INFO - ======================================================================
+2025-11-14 18:32:07 - FraudDetection - INFO - 
+Top 10 Features com Correlação Positiva:
+2025-11-14 18:32:07 - FraudDetection - INFO - Class     1.000000
+V11       0.154876
+V4        0.133447
+V2        0.091289
+V21       0.040413
+V19       0.034783
+V20       0.020090
+V8        0.019875
+V27       0.017580
+V28       0.009536
+Amount    0.005632
+Name: Class, dtype: float64
+2025-11-14 18:32:07 - FraudDetection - INFO - 
+Top 10 Features com Correlação Negativa:
+2025-11-14 18:32:07 - FraudDetection - INFO - V9    -0.097733
+V1    -0.101347
+V18   -0.111485
+V7    -0.187257
+V3    -0.192961
+V16   -0.196539
+V10   -0.216883
+V12   -0.260593
+V14   -0.302544
+V17   -0.326481
+Name: Class, dtype: float64
+2025-11-14 18:32:07 - FraudDetection - INFO - 
+INTERPRETAÇÃO:
+2025-11-14 18:32:07 - FraudDetection - INFO - - Correlação positiva: aumento da feature associado ao aumento da probabilidade de fraude
+2025-11-14 18:32:07 - FraudDetection - INFO - - Correlação negativa: aumento da feature associado à diminuição da probabilidade de fraude
+2025-11-14 18:32:07 - FraudDetection - INFO - - Valores próximos a 0 indicam baixa correlação linear
+2025-11-14 18:32:08 - FraudDetection - INFO - Gráfico salvo: graficos/04_correlation_heatmap.png
+2025-11-14 18:32:08 - FraudDetection - INFO - SEPARAÇÃO DE DADOS
+2025-11-14 18:32:08 - FraudDetection - INFO - ======================================================================
+2025-11-14 18:32:08 - FraudDetection - INFO - Dimensões da matriz de features (X): (284807, 30)
+2025-11-14 18:32:08 - FraudDetection - INFO - Dimensões do vetor de labels (y): (284807,)
+2025-11-14 18:32:08 - FraudDetection - INFO - 
+Colunas das features:
+['Time', 'V1', 'V2', 'V3', 'V4', 'V5', 'V6', 'V7', 'V8', 'V9', 'V10', 'V11', 'V12', 'V13', 'V14', 'V15', 'V16', 'V17', 'V18', 'V19', 'V20', 'V21', 'V22', 'V23', 'V24', 'V25', 'V26', 'V27', 'V28', 'Amount']
+2025-11-14 18:32:08 - FraudDetection - INFO - VERIFICAÇÃO FINAL ANTES DA DIVISÃO DOS DADOS
+2025-11-14 18:32:08 - FraudDetection - INFO - ======================================================================
+2025-11-14 18:32:08 - FraudDetection - INFO - 
+Valores NaN em X: 0
+2025-11-14 18:32:08 - FraudDetection - INFO - Valores NaN em y: 0
+2025-11-14 18:32:08 - FraudDetection - INFO - Valores infinitos em X: 0
+2025-11-14 18:32:08 - FraudDetection - INFO - 
+[OK] Nenhum valor inválido detectado.
+2025-11-14 18:32:08 - FraudDetection - INFO - 
+Dimensões finais: X = (284807, 30), y = (284807,)
+2025-11-14 18:32:08 - FraudDetection - INFO - DIVISÃO DOS DADOS
+2025-11-14 18:32:08 - FraudDetection - INFO - ======================================================================
+2025-11-14 18:32:08 - FraudDetection - INFO - 
+Conjunto de Treino: 227,845 amostras (80.0%)
+2025-11-14 18:32:08 - FraudDetection - INFO - Conjunto de Teste:  56,962 amostras (20.0%)
+2025-11-14 18:32:08 - FraudDetection - INFO - 
+DISTRIBUIÇÃO DE CLASSES NO CONJUNTO DE TREINO:
+2025-11-14 18:32:08 - FraudDetection - INFO - Class
+0    227451
+1       394
+Name: count, dtype: int64
+2025-11-14 18:32:08 - FraudDetection - INFO - Proporção de fraudes: 0.1729%
+2025-11-14 18:32:08 - FraudDetection - INFO - 
+DISTRIBUIÇÃO DE CLASSES NO CONJUNTO DE TESTE:
+2025-11-14 18:32:08 - FraudDetection - INFO - Class
+0    56864
+1       98
+Name: count, dtype: int64
+2025-11-14 18:32:08 - FraudDetection - INFO - Proporção de fraudes: 0.1720%
+2025-11-14 18:32:08 - FraudDetection - INFO - 
+[OK] Estratificação bem-sucedida: proporções mantidas em ambos os conjuntos.
+2025-11-14 18:32:08 - FraudDetection - INFO - NORMALIZAÇÃO DE FEATURES
+2025-11-14 18:32:08 - FraudDetection - INFO - ======================================================================
+2025-11-14 18:32:08 - FraudDetection - INFO - 
+Features a serem normalizadas: ['Time', 'Amount']
+2025-11-14 18:32:08 - FraudDetection - INFO - 
+Estatísticas ANTES da normalização:
+2025-11-14 18:32:08 - FraudDetection - INFO -                 Time         Amount
+count  227845.000000  227845.000000
+mean    94885.093704      88.176298
+std     47488.415034     250.722602
+min         0.000000       0.000000
+25%     54228.000000       5.640000
+50%     84805.000000      22.000000
+75%    139364.000000      77.490000
+max    172792.000000   25691.160000
+2025-11-14 18:32:08 - FraudDetection - INFO - 
+Estatísticas APÓS a normalização (conjunto de treino):
+2025-11-14 18:32:08 - FraudDetection - INFO -                Time        Amount
+count  2.278450e+05  2.278450e+05
+mean  -1.409578e-16  3.742243e-17
+std    1.000002e+00  1.000002e+00
+min   -1.998073e+00 -3.516894e-01
+25%   -8.561495e-01 -3.291944e-01
+50%   -2.122647e-01 -2.639429e-01
+75%    9.366285e-01 -4.262209e-02
+max    1.640549e+00  1.021170e+02
+2025-11-14 18:32:08 - FraudDetection - INFO - 
+[OK] Normalização concluída com sucesso.
+2025-11-14 18:32:08 - FraudDetection - INFO -      Média aproximadamente 0 e Desvio Padrão aproximadamente 1 para as features normalizadas.
+2025-11-14 18:32:08 - FraudDetection - INFO - APLICAÇÃO DO SMOTE
+2025-11-14 18:32:08 - FraudDetection - INFO - ======================================================================
+2025-11-14 18:32:08 - FraudDetection - INFO - 
+Distribuição de classes ANTES do SMOTE (Conjunto de Treino):
+2025-11-14 18:32:08 - FraudDetection - INFO - Classe 0 (Legítimas): 227,451
+2025-11-14 18:32:08 - FraudDetection - INFO - Classe 1 (Fraudes):   394
+2025-11-14 18:32:08 - FraudDetection - INFO - Razão: 1:577
+2025-11-14 18:32:08 - FraudDetection - INFO - 
+Aplicando SMOTE com k_neighbors=5...
+2025-11-14 18:32:09 - FraudDetection - INFO - 
+Distribuição de classes APÓS o SMOTE (Conjunto de Treino):
+2025-11-14 18:32:09 - FraudDetection - INFO - Classe 0 (Legítimas): 227,451
+2025-11-14 18:32:09 - FraudDetection - INFO - Classe 1 (Fraudes):   227,451
+2025-11-14 18:32:09 - FraudDetection - INFO - Razão: 1:1 (Balanceado)
+2025-11-14 18:32:09 - FraudDetection - INFO - 
+Amostras sintéticas criadas: 227,057
+2025-11-14 18:32:09 - FraudDetection - INFO - Total de amostras após SMOTE: 454,902
+2025-11-14 18:32:09 - FraudDetection - INFO - 
+[OK] SMOTE aplicado com sucesso. Classes balanceadas no conjunto de treino.
+2025-11-14 18:32:09 - FraudDetection - INFO - Gráfico salvo: graficos/05_histogram.png
+2025-11-14 18:32:09 - FraudDetection - INFO - TREINAMENTO DO MODELO BASELINE
+2025-11-14 18:32:09 - FraudDetection - INFO - ======================================================================
+2025-11-14 18:32:09 - FraudDetection - INFO - 
+Inicializando Random Forest com configurações padrão...
+2025-11-14 18:32:09 - FraudDetection - INFO - 
+Treinando modelo...
+2025-11-14 18:34:27 - FraudDetection - INFO - 
+[OK] Modelo baseline treinado com sucesso.
+2025-11-14 18:34:27 - FraudDetection - INFO -      Número de árvores: 100
+2025-11-14 18:34:27 - FraudDetection - INFO -      Número de features: 30
+2025-11-14 18:34:27 - FraudDetection - INFO - 
+Salvando modelo baseline...
+2025-11-14 18:34:27 - FraudDetection - INFO - Modelo salvo: modelos/modelo_baseline.pkl (4.58 MB)
+2025-11-14 18:34:28 - FraudDetection - INFO - AVALIAÇÃO DO MODELO BASELINE
+2025-11-14 18:34:28 - FraudDetection - INFO - ======================================================================
+2025-11-14 18:34:28 - FraudDetection - INFO - 
+MÉTRICAS DE DESEMPENHO:
+2025-11-14 18:34:28 - FraudDetection - INFO -   Acurácia:  0.9995
+2025-11-14 18:34:28 - FraudDetection - INFO -   Precisão:  0.8454
+2025-11-14 18:34:28 - FraudDetection - INFO -   Recall:    0.8367
+2025-11-14 18:34:28 - FraudDetection - INFO -   F1-Score:  0.8410
+2025-11-14 18:34:28 - FraudDetection - INFO -   ROC-AUC:   0.9731
+2025-11-14 18:34:28 - FraudDetection - INFO - 
+======================================================================
+2025-11-14 18:34:28 - FraudDetection - INFO - RELATÓRIO DE CLASSIFICAÇÃO DETALHADO
+2025-11-14 18:34:28 - FraudDetection - INFO - ======================================================================
+2025-11-14 18:34:28 - FraudDetection - INFO -                       precision    recall  f1-score   support
+
+Transações Legítimas     0.9997    0.9997    0.9997     56864
+             Fraudes     0.8454    0.8367    0.8410        98
+
+            accuracy                         0.9995     56962
+           macro avg     0.9225    0.9182    0.9204     56962
+        weighted avg     0.9995    0.9995    0.9995     56962
+
+2025-11-14 18:34:28 - FraudDetection - INFO - Gráfico salvo: graficos/06_confusion_matrix.png
+2025-11-14 18:34:28 - FraudDetection - INFO - 
+INTERPRETAÇÃO DA MATRIZ DE CONFUSÃO
+2025-11-14 18:34:28 - FraudDetection - INFO - ======================================================================
+2025-11-14 18:34:28 - FraudDetection - INFO - 
+Verdadeiros Negativos (TN): 56,849
+2025-11-14 18:34:28 - FraudDetection - INFO -   → Transações legítimas corretamente identificadas como legítimas
+2025-11-14 18:34:28 - FraudDetection - INFO - 
+Falsos Positivos (FP): 15
+2025-11-14 18:34:28 - FraudDetection - INFO -   → Transações legítimas incorretamente classificadas como fraude
+2025-11-14 18:34:28 - FraudDetection - INFO -   → IMPACTO: Bloqueio indevido, insatisfação do cliente
+2025-11-14 18:34:28 - FraudDetection - INFO - 
+Falsos Negativos (FN): 16
+2025-11-14 18:34:28 - FraudDetection - INFO -   → Fraudes incorretamente classificadas como legítimas
+2025-11-14 18:34:28 - FraudDetection - INFO -   → IMPACTO: Prejuízo financeiro direto, fraude não detectada
+2025-11-14 18:34:28 - FraudDetection - INFO - 
+Verdadeiros Positivos (TP): 82
+2025-11-14 18:34:28 - FraudDetection - INFO -   → Fraudes corretamente identificadas como fraudes
+2025-11-14 18:34:28 - FraudDetection - INFO -   → BENEFÍCIO: Prevenção de prejuízo
+2025-11-14 18:34:28 - FraudDetection - INFO - 
+MÉTRICAS DERIVADAS:
+2025-11-14 18:34:28 - FraudDetection - INFO -   Taxa de Detecção de Fraudes: 83.67%
+2025-11-14 18:34:28 - FraudDetection - INFO -   Taxa de Falsos Alarmes: 0.03%
+2025-11-14 18:34:28 - FraudDetection - INFO - Gráfico salvo: graficos/07_roc_curve.png
+2025-11-14 18:34:28 - FraudDetection - INFO - INTERPRETAÇÃO DA CURVA ROC:
+2025-11-14 18:34:28 - FraudDetection - INFO - ======================================================================
+2025-11-14 18:34:28 - FraudDetection - INFO - AUC = 0.9731
+2025-11-14 18:34:29 - FraudDetection - INFO - 
+Interpretação da AUC:
+2025-11-14 18:34:29 - FraudDetection - INFO -   → Excelente capacidade de discriminação
+2025-11-14 18:34:29 - FraudDetection - INFO - 
+A curva ROC mostra o trade-off entre TPR e FPR em diferentes thresholds.
+2025-11-14 18:34:29 - FraudDetection - INFO - Quanto mais próxima do canto superior esquerdo, melhor o modelo.
+2025-11-14 18:34:29 - FraudDetection - INFO - Gráfico salvo: graficos/08_precision_recall.png
+2025-11-14 18:34:29 - FraudDetection - INFO - INTERPRETAÇÃO DA CURVA PRECISION-RECALL:
+2025-11-14 18:34:29 - FraudDetection - INFO - ======================================================================
+2025-11-14 18:34:29 - FraudDetection - INFO - Esta curva é particularmente importante em problemas desbalanceados.
+2025-11-14 18:34:29 - FraudDetection - INFO - 
+Mostra o trade-off entre:
+2025-11-14 18:34:29 - FraudDetection - INFO -   - Precisão: Minimizar falsos positivos (transações legítimas bloqueadas)
+2025-11-14 18:34:29 - FraudDetection - INFO -   - Recall: Maximizar detecção de fraudes (capturar todas as fraudes)
+2025-11-14 18:34:29 - FraudDetection - INFO - 
+Quanto mais próxima do canto superior direito, melhor o modelo.
+2025-11-14 18:34:29 - FraudDetection - INFO - IMPORTÂNCIA DAS FEATURES
+2025-11-14 18:34:29 - FraudDetection - INFO - ======================================================================
+2025-11-14 18:34:29 - FraudDetection - INFO - 
+Top 15 Features Mais Importantes:
+2025-11-14 18:34:29 - FraudDetection - INFO - feature  importance
+    V14    0.195607
+    V10    0.110459
+     V4    0.106133
+    V12    0.095085
+    V17    0.085002
+     V3    0.060455
+    V11    0.056356
+    V16    0.043757
+     V2    0.036986
+     V9    0.026203
+     V7    0.018509
+    V21    0.015864
+     V8    0.015731
+    V18    0.013913
+    V27    0.011177
+2025-11-14 18:34:29 - FraudDetection - INFO - Gráfico salvo: graficos/09_feature_importance.png
+2025-11-14 18:34:29 - FraudDetection - INFO - 
+INTERPRETAÇÃO:
+2025-11-14 18:34:29 - FraudDetection - INFO - Features com maior importância contribuem mais para as decisões do modelo.
+2025-11-14 18:34:29 - FraudDetection - INFO - A importância é medida pela redução média da impureza (Gini) em todas as árvores.
+2025-11-14 18:34:29 - FraudDetection - INFO - CONFIGURAÇÃO DA BUSCA DE HIPERPARÂMETROS
+2025-11-14 18:34:29 - FraudDetection - INFO - ======================================================================
+2025-11-14 18:34:29 - FraudDetection - INFO - 
+Espaço de busca definido:
+2025-11-14 18:34:29 - FraudDetection - INFO -   n_estimators        : [100, 200, 300, 500]
+2025-11-14 18:34:29 - FraudDetection - INFO -   max_depth           : [10, 20, 30, 40, None]
+2025-11-14 18:34:29 - FraudDetection - INFO -   min_samples_split   : [2, 5, 10, 15]
+2025-11-14 18:34:29 - FraudDetection - INFO -   min_samples_leaf    : [1, 2, 4, 8]
+2025-11-14 18:34:29 - FraudDetection - INFO -   max_features        : ['sqrt', 'log2', None]
+2025-11-14 18:34:29 - FraudDetection - INFO -   bootstrap           : [True, False]
+2025-11-14 18:34:29 - FraudDetection - INFO -   class_weight        : ['balanced', 'balanced_subsample', None]
+2025-11-14 18:34:29 - FraudDetection - INFO - 
+Número total de combinações possíveis: 5,760
+2025-11-14 18:34:29 - FraudDetection - INFO - 
+Métrica de otimização: Recall (maximizar detecção de fraudes)
+2025-11-14 18:34:29 - FraudDetection - INFO - Método de validação: Stratified K-Fold Cross-Validation (k=3)
+2025-11-14 18:34:29 - FraudDetection - INFO - INICIANDO BUSCA ALEATÓRIA DE HIPERPARÂMETROS
+2025-11-14 18:34:29 - FraudDetection - INFO - ======================================================================
+2025-11-14 18:34:29 - FraudDetection - INFO - 
+Este processo pode levar vários minutos...
+
+2025-11-18 08:42:17 - FraudDetection - INFO - 
+[OK] Busca aleatória concluída com sucesso.
+2025-11-18 08:42:17 - FraudDetection - INFO - RESULTADOS DA OTIMIZAÇÃO DE HIPERPARÂMETROS
+2025-11-18 08:42:17 - FraudDetection - INFO - ======================================================================
+2025-11-18 08:42:17 - FraudDetection - INFO - 
+Melhores hiperparâmetros encontrados:
+2025-11-18 08:42:17 - FraudDetection - INFO -   n_estimators        : 100
+2025-11-18 08:42:17 - FraudDetection - INFO -   min_samples_split   : 5
+2025-11-18 08:42:17 - FraudDetection - INFO -   min_samples_leaf    : 1
+2025-11-18 08:42:17 - FraudDetection - INFO -   max_features        : log2
+2025-11-18 08:42:17 - FraudDetection - INFO -   max_depth           : 20
+2025-11-18 08:42:17 - FraudDetection - INFO -   class_weight        : None
+2025-11-18 08:42:17 - FraudDetection - INFO -   bootstrap           : False
+2025-11-18 08:42:17 - FraudDetection - INFO - 
+Melhor Score (Recall) na Validação Cruzada: 1.0000
+2025-11-18 08:42:17 - FraudDetection - INFO - Tempo total de busca: 145.08 segundos
+2025-11-18 08:42:17 - FraudDetection - INFO - 
+Salvando modelo otimizado...
+2025-11-18 08:42:17 - FraudDetection - INFO - Modelo salvo: modelos/modelo_otimizado.pkl (4.41 MB)
+2025-11-18 08:42:17 - FraudDetection - INFO - AVALIAÇÃO DO MODELO OTIMIZADO
+2025-11-18 08:42:17 - FraudDetection - INFO - ======================================================================
+2025-11-18 08:42:17 - FraudDetection - INFO - 
+MÉTRICAS DE DESEMPENHO:
+2025-11-18 08:42:17 - FraudDetection - INFO -   Acurácia:  0.9993
+2025-11-18 08:42:17 - FraudDetection - INFO -   Precisão:  0.7921
+2025-11-18 08:42:17 - FraudDetection - INFO -   Recall:    0.8163
+2025-11-18 08:42:17 - FraudDetection - INFO -   F1-Score:  0.8040
+2025-11-18 08:42:17 - FraudDetection - INFO -   ROC-AUC:   0.9560
+2025-11-18 08:42:17 - FraudDetection - INFO - 
+======================================================================
+2025-11-18 08:42:17 - FraudDetection - INFO - RELATÓRIO DE CLASSIFICAÇÃO DETALHADO
+2025-11-18 08:42:17 - FraudDetection - INFO - ======================================================================
+2025-11-18 08:42:17 - FraudDetection - INFO -                       precision    recall  f1-score   support
+
+Transações Legítimas     0.9997    0.9996    0.9997     56864
+             Fraudes     0.7921    0.8163    0.8040        98
+
+            accuracy                         0.9993     56962
+           macro avg     0.8959    0.9080    0.9018     56962
+        weighted avg     0.9993    0.9993    0.9993     56962
+
+2025-11-18 08:42:18 - FraudDetection - INFO - Gráfico salvo: graficos/10_confusion_matrix.png
+2025-11-18 08:42:18 - FraudDetection - INFO - 
+INTERPRETAÇÃO DA MATRIZ DE CONFUSÃO
+2025-11-18 08:42:18 - FraudDetection - INFO - ======================================================================
+2025-11-18 08:42:18 - FraudDetection - INFO - 
+Verdadeiros Negativos (TN): 56,843
+2025-11-18 08:42:18 - FraudDetection - INFO -   → Transações legítimas corretamente identificadas como legítimas
+2025-11-18 08:42:18 - FraudDetection - INFO - 
+Falsos Positivos (FP): 21
+2025-11-18 08:42:18 - FraudDetection - INFO -   → Transações legítimas incorretamente classificadas como fraude
+2025-11-18 08:42:18 - FraudDetection - INFO -   → IMPACTO: Bloqueio indevido, insatisfação do cliente
+2025-11-18 08:42:18 - FraudDetection - INFO - 
+Falsos Negativos (FN): 18
+2025-11-18 08:42:18 - FraudDetection - INFO -   → Fraudes incorretamente classificadas como legítimas
+2025-11-18 08:42:18 - FraudDetection - INFO -   → IMPACTO: Prejuízo financeiro direto, fraude não detectada
+2025-11-18 08:42:18 - FraudDetection - INFO - 
+Verdadeiros Positivos (TP): 80
+2025-11-18 08:42:18 - FraudDetection - INFO -   → Fraudes corretamente identificadas como fraudes
+2025-11-18 08:42:18 - FraudDetection - INFO -   → BENEFÍCIO: Prevenção de prejuízo
+2025-11-18 08:42:18 - FraudDetection - INFO - 
+MÉTRICAS DERIVADAS:
+2025-11-18 08:42:18 - FraudDetection - INFO -   Taxa de Detecção de Fraudes: 81.63%
+2025-11-18 08:42:18 - FraudDetection - INFO -   Taxa de Falsos Alarmes: 0.04%
+2025-11-18 08:42:18 - FraudDetection - INFO - COMPARAÇÃO DE DESEMPENHO DOS MODELOS
+2025-11-18 08:42:18 - FraudDetection - INFO - ======================================================================
+2025-11-18 08:42:18 - FraudDetection - INFO - 
+   Modelo  Acurácia  Precisão   Recall  F1-Score  ROC-AUC
+ Baseline  0.999456  0.845361 0.836735  0.841026 0.973103
+Otimizado  0.999315  0.792079 0.816327  0.804020 0.955965
+2025-11-18 08:42:18 - FraudDetection - INFO - 
+======================================================================
+2025-11-18 08:42:18 - FraudDetection - INFO - VARIAÇÃO PERCENTUAL (Otimizado vs Baseline)
+2025-11-18 08:42:18 - FraudDetection - INFO - ======================================================================
+2025-11-18 08:42:18 - FraudDetection - INFO -   Acurácia    : -0.01%
+2025-11-18 08:42:18 - FraudDetection - INFO -   Precisão    : -6.30%
+2025-11-18 08:42:18 - FraudDetection - INFO -   Recall      : -2.44%
+2025-11-18 08:42:18 - FraudDetection - INFO -   F1-Score    : -4.40%
+2025-11-18 08:42:18 - FraudDetection - INFO -   ROC-AUC     : -1.76%
+2025-11-18 08:42:18 - FraudDetection - INFO - Gráfico salvo: graficos/11_bar_chart.png
+2025-11-18 08:42:19 - FraudDetection - INFO - Gráfico salvo: graficos/12_cost_benefit.png
+2025-11-18 08:42:19 - FraudDetection - INFO - ANÁLISE DE THRESHOLD ÓTIMO
+2025-11-18 08:42:19 - FraudDetection - INFO - ======================================================================
+2025-11-18 08:42:19 - FraudDetection - INFO - 
+Threshold que maximiza F1-Score: 0.75
+2025-11-18 08:42:19 - FraudDetection - INFO - 
+Métricas com threshold ótimo:
+2025-11-18 08:42:19 - FraudDetection - INFO -   Precisão:  0.9277
+2025-11-18 08:42:19 - FraudDetection - INFO -   Recall:    0.7857
+2025-11-18 08:42:19 - FraudDetection - INFO -   F1-Score:  0.8508
+2025-11-18 08:42:19 - FraudDetection - INFO - 
+CONSIDERAÇÕES PARA ESCOLHA DO THRESHOLD:
+2025-11-18 08:42:19 - FraudDetection - INFO - - Se o custo de fraudes não detectadas >> custo de falsos alarmes:
+2025-11-18 08:42:19 - FraudDetection - INFO -   → Use threshold MENOR (prioriza Recall)
+2025-11-18 08:42:19 - FraudDetection - INFO - - Se o custo de falsos alarmes é significativo:
+2025-11-18 08:42:19 - FraudDetection - INFO -   → Use threshold MAIOR (prioriza Precisão)
+2025-11-18 08:42:19 - FraudDetection - INFO - - Para balanceamento: use threshold que maximiza F1-Score
+2025-11-18 08:42:19 - FraudDetection - INFO - ANÁLISE DE CUSTO-BENEFÍCIO
+2025-11-18 08:42:19 - FraudDetection - INFO - ======================================================================
+2025-11-18 08:42:19 - FraudDetection - INFO - 
+PARÂMETROS DE CUSTO (valores hipotéticos):
+2025-11-18 08:42:19 - FraudDetection - INFO -   Custo por fraude não detectada (FN): $100.00
+2025-11-18 08:42:19 - FraudDetection - INFO -   Custo por falso positivo (FP):       $5.00
+2025-11-18 08:42:19 - FraudDetection - INFO - 
+======================================================================
+2025-11-18 08:42:19 - FraudDetection - INFO - CENÁRIO COM MODELO DE DETECÇÃO
+2025-11-18 08:42:19 - FraudDetection - INFO - ======================================================================
+2025-11-18 08:42:19 - FraudDetection - INFO - 
+Custo de fraudes não detectadas (FN):  $1,800.00
+2025-11-18 08:42:19 - FraudDetection - INFO -   → 18 fraudes não detectadas × $100.00
+2025-11-18 08:42:19 - FraudDetection - INFO - 
+Custo de falsos positivos (FP):        $105.00
+2025-11-18 08:42:19 - FraudDetection - INFO -   → 21 transações bloqueadas indevidamente × $5.00
+2025-11-18 08:42:19 - FraudDetection - INFO - 
+Custo total com modelo:                $1,905.00
+2025-11-18 08:42:19 - FraudDetection - INFO - 
+======================================================================
+2025-11-18 08:42:19 - FraudDetection - INFO - CENÁRIO SEM MODELO (baseline)
+2025-11-18 08:42:19 - FraudDetection - INFO - ======================================================================
+2025-11-18 08:42:19 - FraudDetection - INFO - 
+Custo total (todas fraudes passariam): $9,800.00
+2025-11-18 08:42:19 - FraudDetection - INFO -   → 98 fraudes × $100.00
+2025-11-18 08:42:19 - FraudDetection - INFO - 
+======================================================================
+2025-11-18 08:42:19 - FraudDetection - INFO - BENEFÍCIO ECONÔMICO DO MODELO
+2025-11-18 08:42:19 - FraudDetection - INFO - ======================================================================
+2025-11-18 08:42:19 - FraudDetection - INFO - 
+Economia gerada:                       $7,895.00
+2025-11-18 08:42:19 - FraudDetection - INFO - Redução de custo:                      80.56%
+2025-11-18 08:42:19 - FraudDetection - INFO - 
+Fraudes prevenidas:                    80
+2025-11-18 08:42:19 - FraudDetection - INFO - Valor total prevenido:                 $8,000.00
+2025-11-18 08:42:20 - FraudDetection - INFO - Gráfico salvo: graficos/13_bar_chart.png
+2025-11-18 08:42:20 - FraudDetection - INFO - 
+INTERPRETAÇÃO DOS RESULTADOS:
+2025-11-18 08:42:20 - FraudDetection - INFO - ======================================================================
+2025-11-18 08:42:20 - FraudDetection - INFO - 
+Para cada $1905.00 investidos no sistema de detecção,
+2025-11-18 08:42:20 - FraudDetection - INFO - a organização economiza $7895.00 em fraudes prevenidas.
+2025-11-18 08:42:20 - FraudDetection - INFO - 
+ROI (Return on Investment): 414.44%
